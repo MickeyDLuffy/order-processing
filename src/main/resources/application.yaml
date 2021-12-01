@@ -1,1 +1,11 @@
 
+order-processing:
+  variables:
+    urls:
+#      market-data-service: localhost:8080
+      redis:
+        topic: "pubsub:market-data"
+        topic-ex2: "pubsub:market-data-ex2"
+
+server:
+  port: 9090
