@@ -6,6 +6,8 @@ import com.redbrokers.orderprocessing.service.redis.RedisMessagePublisher;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisPassword;
+import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
@@ -21,10 +23,18 @@ public class RedisConfig {
     @Value("${order-processing.variables.urls.redis.topic-ex2}")
     private  String exchange2Topic;
 
+    @Value("${spring.redis.port}")
+    private int port;
+    @Value("${spring.redis.host}")
+    private String host;
+    @Value("${spring.redis.password}")
+    private String password;
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        return new JedisConnectionFactory();
+        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(host, port);
+        redisStandaloneConfiguration.setPassword(RedisPassword.of(password));
+        return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
     @Bean
