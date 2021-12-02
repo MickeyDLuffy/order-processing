@@ -1,4 +1,4 @@
-package com.redbrokers.orderprocessing.service;
+package com.redbrokers.orderprocessing.service.redis;
 
 import org.springframework.data.redis.connection.Message;
 

@@ -1,4 +1,4 @@
-package com.redbrokers.orderprocessing.service;
+package com.redbrokers.orderprocessing.service.redis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.redbrokers.orderprocessing.dto.OrderBookDto;
@@ -22,7 +22,6 @@ public class RedisMessageSubscriber implements MessageListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         log.info("Loggn the data {}", orderbooks);
     }
 }

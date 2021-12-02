@@ -1,6 +1,6 @@
-package com.redbrokers.orderprocessing.service.impl;
+package com.redbrokers.orderprocessing.service.redis;
 
-import com.redbrokers.orderprocessing.service.MessagePublisher;
+import com.redbrokers.orderprocessing.service.redis.MessagePublisher;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;

@@ -1,9 +1,8 @@
 package com.redbrokers.orderprocessing.config;
 
-import com.redbrokers.orderprocessing.service.MessagePublisher;
-import com.redbrokers.orderprocessing.service.RedisMessageSubscriber;
-import com.redbrokers.orderprocessing.service.impl.RedisMessagePublisher;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.redbrokers.orderprocessing.service.redis.MessagePublisher;
+import com.redbrokers.orderprocessing.service.redis.RedisMessageSubscriber;
+import com.redbrokers.orderprocessing.service.redis.RedisMessagePublisher;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
