@@ -22,8 +22,8 @@ public class OrderRestController {
     }
 
 
-    @PostMapping("/")
-    public ResponseEntity<?> processOrder(@RequestBody Order order){
-        return orderProcessingService.getDataFromRedisQueue();
+    @PostMapping("/d")
+    public ResponseEntity<?> processOrder(@RequestBody Order order) {
+        return orderProcessingService.getDataFromRedisQueue(order);
     }
 }
