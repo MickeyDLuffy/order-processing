@@ -8,4 +8,11 @@ import org.springframework.stereotype.Service;
 public interface ExchangeConnectivityService {
     ResponseEntity<?> buyStock(Order order);
     ResponseEntity<?> sellStock(Order order);
+    ResponseEntity<?> getOrderBooks();
+    ResponseEntity<?> getOrderBooksByTicker();
+    ResponseEntity<?> getOrderBooksByTickerBought();
+    ResponseEntity<?> getOrderBooksByTickerSold();
+    ResponseEntity<?> getOrderBooksTickerOpen();
+    ResponseEntity<?> getOrderBookTickerClosed();
+    ResponseEntity<?> getOrderBookTickerCancelled();
 }
