@@ -3,6 +3,7 @@ order-processing:
   variables:
     urls:
 #      market-data-service: localhost:8080
+      exchange-service: http://localhost:8085/api/v1/exchange/orders
       redis:
         topic: "pubsub:market-data"
         topic-ex2: "pubsub:market-data-ex2"
